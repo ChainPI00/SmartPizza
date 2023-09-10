@@ -1,0 +1,213 @@
+[
+	{
+	  "anonymous": false,
+	  "inputs": [
+		{
+		  "indexed": true,
+		  "internalType": "uint256",
+		  "name": "orderId",
+		  "type": "uint256"
+		},
+		{
+		  "indexed": true,
+		  "internalType": "uint256",
+		  "name": "pizzaIndex",
+		  "type": "uint256"
+		}
+	  ],
+	  "name": "PizzaAdded",
+	  "type": "event"
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "orderId",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string[]",
+		  "name": "ingredients",
+		  "type": "string[]"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "tAmbiente",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "umidita",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "lievitazione1",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "lievitazione2",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "tPlatea",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "tForno",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "time",
+		  "type": "uint256"
+		}
+	  ],
+	  "name": "addPizza",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "getAllPizzas",
+	  "outputs": [
+		{
+		  "components": [
+			{
+			  "internalType": "uint256",
+			  "name": "orderId",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "string[]",
+			  "name": "ingredients",
+			  "type": "string[]"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "tAmbiente",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "umidita",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "lievitazione1",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "lievitazione2",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "tPlatea",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "tForno",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "time",
+			  "type": "uint256"
+			}
+		  ],
+		  "internalType": "struct SmartPizza.Pizza[]",
+		  "name": "",
+		  "type": "tuple[]"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "orderId",
+		  "type": "uint256"
+		}
+	  ],
+	  "name": "getPizzaByOrderId",
+	  "outputs": [
+		{
+		  "components": [
+			{
+			  "internalType": "uint256",
+			  "name": "orderId",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "string[]",
+			  "name": "ingredients",
+			  "type": "string[]"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "tAmbiente",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "umidita",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "lievitazione1",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "lievitazione2",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "tPlatea",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "tForno",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "time",
+			  "type": "uint256"
+			}
+		  ],
+		  "internalType": "struct SmartPizza.Pizza",
+		  "name": "",
+		  "type": "tuple"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "getPizzaCount",
+	  "outputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "",
+		  "type": "uint256"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	}
+  ]

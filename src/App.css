@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -27,6 +28,37 @@
 .App-link {
   color: #61dafb;
 }
+
+/* src/App.css */
+
+/* src/App.css */
+
+/* Stili per la barra di navigazione */
+.navbar {
+  background-color: yellow;
+  display: flex;
+  justify-content: center; /* Centra orizzontalmente i bottoni nella barra */
+  align-items: center; /* Centra verticalmente i bottoni nella barra */
+  padding: 10px; /* Aumenta il padding per spostare i bottoni più vicino al centro */
+}
+
+/* Stili per i bottoni nella barra di navigazione */
+.nav-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px; /* Aumenta il padding per aumentare la dimensione dei bottoni */
+  margin: 0 10px; /* Aggiunge margine tra i bottoni */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #555;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
