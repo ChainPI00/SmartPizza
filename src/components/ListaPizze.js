@@ -54,7 +54,7 @@ function ListaPizze() {
   return (
     <div style={style.container}>
       <div style={style.divStyle}>
-        <h1>Ricerca Pizza</h1>
+        <h1 style={style.h1}>Ricerca Pizza</h1>
         <input 
           type="text" 
           value={orderId} 
@@ -97,7 +97,7 @@ function ListaPizze() {
         )}
       </div>
       <div style={style.divStyle}>
-        <h1>Tutte le Pizze</h1>
+        <h1 style={style.h1}>Tutte le Pizze</h1>
         <table style={style.tableStyle}>
           <thead>
             <tr>
@@ -140,49 +140,66 @@ function ListaPizze() {
 const style = {
   container: {
     display: 'flex',
-    justifyContent: 'space-around',
+    flexDirection: 'column',
+    alignItems: 'center',
     padding: '20px',
-    flexWrap: 'wrap',
   },
   divStyle: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     padding: '20px',
     borderRadius: '10px',
-    width: '100%',
+    width: 'fit-content', // Aggiunto per fare in modo che il div si adatti al contenuto
+    margin: '20px auto',
+    textAlign: 'center',
     color: 'white',
-    margin: '10px 0',
-    '@media(min-width: 600px)': {
-      width: '45%',
-    },
+    overflowX: 'auto', // Aggiunto per gestire l'overflow della tabella
   },
   inputStyle: {
-    width: '100%',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    border: '1px solid white',
+    borderRadius: '5px',
+    width: '300px',
     padding: '10px',
     margin: '10px 0',
-    borderRadius: '5px',
+    color: 'black',
   },
   buttonStyle: {
     padding: '10px 20px',
     borderRadius: '5px',
     border: 'none',
     cursor: 'pointer',
+    backgroundColor: 'white',
+    color: 'black',
+    margin: '10px 0',
   },
   tableStyle: {
     width: '100%',
     borderCollapse: 'collapse',
     marginTop: '20px',
+    color: 'white',
+    '@media(min-width: 600px)': {
+      fontSize: '14px',
+    },
+    '@media(min-width: 768px)': {
+      fontSize: '16px',
+    },
   },
   th: {
     padding: '10px',
-    border: '1px solid #ddd',
+    border: '1px solid white',
     textAlign: 'left',
-    backgroundColor: '#f4f4f4',
-    color: 'black',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)', // Cambiato da rgba(0, 0, 0, 0.5) a white
+    color: 'black', // Cambiato da white a black
   },
   td: {
     padding: '10px',
-    border: '1px solid #ddd',
+    border: '1px solid white',
     textAlign: 'left',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Cambiato da rgba(255, 255, 255, 0.5) a rgba(0, 0, 0, 0.5)
+    color: 'white', // Mantenuto bianco
+  },
+  h1: {
+    color: 'white',
   },
 };
 

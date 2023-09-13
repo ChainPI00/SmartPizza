@@ -1,5 +1,3 @@
-// src/components/Navbar.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -39,7 +37,6 @@ function CustomNavbar() {
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
           </ul>
@@ -50,4 +47,3 @@ function CustomNavbar() {
 }
 
 export default CustomNavbar;
-
