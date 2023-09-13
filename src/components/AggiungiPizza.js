@@ -35,7 +35,7 @@ function AggiungiPizza() {
         console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
       }
   
-      const address = '0xbecb28d69b34e4b3d943d5a5Dc31CFf2A7769EC3';
+      const address = '0x060CE771410981a2ea21bA830026f8F15CCfC001';
       contract = new web3.eth.Contract(abi, address);
     };
 
@@ -60,7 +60,7 @@ function AggiungiPizza() {
       // Creazione dell'oggetto pizzaInput
       const pizzaInput = {
         orderId: parseInt(pizzaInfo.orderId, 10),
-        ingredients: ingredientsArray,
+        ingredients: ingredientsArray, // ora è un array di stringhe hex bytes32
         tAmbiente: parseInt(pizzaInfo.tAmbiente, 10),
         umidita: parseInt(pizzaInfo.umidita, 10),
         lievitazione1: parseInt(pizzaInfo.lievitazione1, 10),
@@ -68,13 +68,28 @@ function AggiungiPizza() {
         tPlatea: parseInt(pizzaInfo.tPlatea, 10),
         tForno: parseInt(pizzaInfo.tForno, 10),
         time: parseInt(pizzaInfo.time, 10),
-      };
+    };
   
       // Log dell'oggetto pizzaInput per assicurarsi che sia nel formato corretto
       console.log('pizzaInput:', pizzaInput);
   
       // Chiamata alla funzione addPizza con l'oggetto pizzaInput
-      await contract.methods.addPizza(pizzaInput).send({ from: accounts[0] });    
+      await contract.methods.addPizza(
+        pizzaInput.orderId,
+        pizzaInput.ingredients,
+        pizzaInput.tAmbiente,
+        pizzaInput.umidita,
+        pizzaInput.lievitazione1,
+        pizzaInput.lievitazione2,
+        pizzaInput.tPlatea,
+        pizzaInput.tForno,
+        pizzaInput.time
+      ).send({ 
+        from: accounts[0], 
+        gas: 2100000, 
+        gasPrice: '8000000000' 
+      });
+         
   
       console.log('Dati della pizza inviati:', pizzaInfo);
   
@@ -84,7 +99,7 @@ function AggiungiPizza() {
         tAmbiente: '',
         umidita: '',
         lievitazione1: '',
-        lievitazione2: '',  
+        lievitazione2: '',
         tPlatea: '',
         tForno: '',
         time: '',
