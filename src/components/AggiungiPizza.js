@@ -250,7 +250,7 @@ function AggiungiPizza() {
 
         <button type="submit" className="btn btn-light" style={{ color: 'black' }}>Aggiungi Pizza</button>
       </div>
-      <audio ref={audioRef} src="/conferma.mp3" preload="auto"></audio>
+      <audio ref={audioRef} src="/sound.mp3" preload="auto"></audio>
     </form>
   );
 }
