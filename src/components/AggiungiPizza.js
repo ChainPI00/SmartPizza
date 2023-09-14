@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Web3 from 'web3';
 import abi from './SmartPizzaABI.json'; // Aggiungi il percorso corretto al tuo file ABI JSON
 
@@ -18,6 +18,8 @@ function AggiungiPizza() {
     tForno: '',
     time: '',
   });
+
+  const audioRef = useRef(); // Crea un riferimento all'elemento audio
 
   useEffect(() => {
     const initWeb3 = async () => {
@@ -104,6 +106,7 @@ function AggiungiPizza() {
         tForno: '',
         time: '',
       });
+      audioRef.current.play();
     } catch (error) {
       console.error('Errore nell’invio dei dati:', error.message);
     }
@@ -247,6 +250,7 @@ function AggiungiPizza() {
 
         <button type="submit" className="btn btn-light" style={{ color: 'black' }}>Aggiungi Pizza</button>
       </div>
+      <audio ref={audioRef} src="/conferma.mp3" preload="auto"></audio>
     </form>
   );
 }
