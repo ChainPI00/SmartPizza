@@ -1,0 +1,77 @@
+.divStyle {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    overflow-x: auto;
+  }
+  
+  
+  .inputStyle {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    color: black;
+  }
+  
+  .buttonStyle {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* Nero al 50% di trasparenza */
+    color: white;
+    margin: 10px 0 10px 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Animazioni su sfondo, colore e cursore */
+    border: 0.05px solid white; /* Aggiungi una bordatura bianca */
+  }
+  
+  .buttonStyle:hover {
+    background-color: white; /* Cambia il colore di sfondo al passaggio del mouse */
+    color: black; /* Cambia il colore del testo al passaggio del mouse */
+    border: none; /* Rimuovi la bordatura bianca */
+    transform: scale(1.05); /* Effetto di zoom in al passaggio del mouse */
+  }
+  
+  .tableStyle {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .tableStyle th, .tableStyle td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s; /* Animazione per le celle */
+  }
+  
+  .tableStyle th:hover, .tableStyle td:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Cambia il colore al passaggio del mouse */
+    color: black;
+  }
+  
+  .th {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    /* Non è stata aggiunta alcuna animazione per l'intestazione della tabella */
+  }
+  
+  .td {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .h1 {
+    color: white;
+    /* Non è stata aggiunta alcuna animazione per l'elemento h1 */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+  }
+  

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import abi from './SmartPizzaABI.json'; 
+import './ListaPizze.css';
 
 let web3;
 let contract;
@@ -52,82 +53,82 @@ function ListaPizze() {
   };
 
   return (
-    <div style={style.container}>
-      <div style={style.divStyle}>
-        <h1 style={style.h1}>Ricerca Pizza</h1>
+    <div className="container">
+      <div className="divStyle">
+        <h1 className="h1">Ricerca Pizza</h1>
         <input 
           type="text" 
           value={orderId} 
           onChange={(e) => setOrderId(e.target.value)} 
           placeholder="Inserisci ID dell'ordine" 
-          style={style.inputStyle}
+          className="inputStyle"
         />
-        <button onClick={fetchPizzaDetail} style={style.buttonStyle}>Ricerca</button>
+        <button onClick={fetchPizzaDetail} className="buttonStyle">Ricerca</button>
         {pizzaDetail && (
-          <table style={style.tableStyle}>
+          <table className="tableStyle">
             <thead>
               <tr>
-                <th style={style.th}>Ingredienti</th>
-                <th style={style.th}>Ambiente</th>
-                <th style={style.th}>Umidità</th>
-                <th style={style.th}>1° Lievitazione</th>
-                <th style={style.th}>2° Lievitazione</th>
-                <th style={style.th}>Temp. Platea</th>
-                <th style={style.th}>Temp. Forno</th>
-                <th style={style.th}>Cottura (s)</th>
+                <th className="th">Ingredienti</th>
+                <th className="th">Ambiente</th>
+                <th className="th">Umidità</th>
+                <th className="th">1° Lievitazione</th>
+                <th className="th">2° Lievitazione</th>
+                <th className="th">Temp. Platea</th>
+                <th className="th">Temp. Forno</th>
+                <th className="th">Cottura (s)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style={style.td}>
+                <td className="td">
                      {pizzaDetail.ingredients.map((ingredient, index) => (
                     <div key={index}>{ingredient}</div>
                      ))}
                 </td>
-                <td style={style.td}>{pizzaDetail.tAmbiente} °C</td>
-                <td style={style.td}>{pizzaDetail.umidita} %</td>
-                <td style={style.td}>{pizzaDetail.lievitazione1} min</td>
-                <td style={style.td}>{pizzaDetail.lievitazione2} min</td>
-                <td style={style.td}>{pizzaDetail.tPlatea} °C</td>
-                <td style={style.td}>{pizzaDetail.tForno} °C</td>
-                <td style={style.td}>{pizzaDetail.time} sec</td>
+                <td className="td">{pizzaDetail.tAmbiente} °C</td>
+                <td className="td">{pizzaDetail.umidita} %</td>
+                <td className="td">{pizzaDetail.lievitazione1} min</td>
+                <td className="td">{pizzaDetail.lievitazione2} min</td>
+                <td className="td">{pizzaDetail.tPlatea} °C</td>
+                <td className="td">{pizzaDetail.tForno} °C</td>
+                <td className="td">{pizzaDetail.time} sec</td>
               </tr>
             </tbody>
           </table>
         )}
       </div>
-      <div style={style.divStyle}>
-        <h1 style={style.h1}>Tutte le Pizze</h1>
-        <table style={style.tableStyle}>
+      <div className="divStyle">
+        <h1 className="h1">Tutte le Pizze</h1>
+        <table className="tableStyle">
           <thead>
             <tr>
-              <th style={style.th}>Numero Ordine</th>
-              <th style={style.th}>Ingredienti</th>
-              <th style={style.th}>Ambiente</th>
-              <th style={style.th}>Umidità</th>
-              <th style={style.th}>1° Lievitazione</th>
-              <th style={style.th}>2° Lievitazione</th>
-              <th style={style.th}>Temp. Platea</th>
-              <th style={style.th}>Temp. Forno</th>
-              <th style={style.th}>Cottura (s)</th>
+              <th className="th">Numero Ordine</th>
+              <th className="th">Ingredienti</th>
+              <th className="th">Ambiente</th>
+              <th className="th">Umidità</th>
+              <th className="th">1° Lievitazione</th>
+              <th className="th">2° Lievitazione</th>
+              <th className="th">Temp. Platea</th>
+              <th className="th">Temp. Forno</th>
+              <th className="th">Cottura (s)</th>
             </tr>
           </thead>
           <tbody>
             {pizze.map((pizza, index) => (
               <tr key={pizza.orderId}>
-                <td style={style.td}>{index + 1}</td>
-                <td style={style.td}>
+                <td className="td">{index + 1}</td>
+                <td className="td">
                   {pizza.ingredients.map((ingredient, index) => (
                     <div key={index}>{ingredient}</div>
                   ))}
                 </td>
-                <td style={style.td}>{pizza.tAmbiente} °C</td>
-                <td style={style.td}>{pizza.umidita} %</td>
-                <td style={style.td}>{pizza.lievitazione1} min</td>
-                <td style={style.td}>{pizza.lievitazione2} min</td>
-                <td style={style.td}>{pizza.tPlatea} °C</td>
-                <td style={style.td}>{pizza.tForno} °C</td>
-                <td style={style.td}>{pizza.time} sec</td>
+                <td className="td">{pizza.tAmbiente} °C</td>
+                <td className="td">{pizza.umidita} %</td>
+                <td className="td">{pizza.lievitazione1} min</td>
+                <td className="td">{pizza.lievitazione2} min</td>
+                <td className="td">{pizza.tPlatea} °C</td>
+                <td className="td">{pizza.tForno} °C</td>
+                <td className="td">{pizza.time} sec</td>
               </tr>
             ))}
           </tbody>
@@ -136,71 +137,5 @@ function ListaPizze() {
     </div>
   );
 }
-
-const style = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '20px',
-  },
-  divStyle: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    padding: '20px',
-    borderRadius: '10px',
-    width: 'fit-content', // Aggiunto per fare in modo che il div si adatti al contenuto
-    margin: '20px auto',
-    textAlign: 'center',
-    color: 'white',
-    overflowX: 'auto', // Aggiunto per gestire l'overflow della tabella
-  },
-  inputStyle: {
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    border: '1px solid white',
-    borderRadius: '5px',
-    width: '300px',
-    padding: '10px',
-    margin: '10px 0',
-    color: 'black',
-  },
-  buttonStyle: {
-    padding: '10px 20px',
-    borderRadius: '5px',
-    border: 'none',
-    cursor: 'pointer',
-    backgroundColor: 'white',
-    color: 'black',
-    margin: '10px 0',
-  },
-  tableStyle: {
-    width: '100%',
-    borderCollapse: 'collapse',
-    marginTop: '20px',
-    color: 'white',
-    '@media(min-width: 600px)': {
-      fontSize: '14px',
-    },
-    '@media(min-width: 768px)': {
-      fontSize: '16px',
-    },
-  },
-  th: {
-    padding: '10px',
-    border: '1px solid white',
-    textAlign: 'left',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)', // Cambiato da rgba(0, 0, 0, 0.5) a white
-    color: 'black', // Cambiato da white a black
-  },
-  td: {
-    padding: '10px',
-    border: '1px solid white',
-    textAlign: 'left',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Cambiato da rgba(255, 255, 255, 0.5) a rgba(0, 0, 0, 0.5)
-    color: 'white', // Mantenuto bianco
-  },
-  h1: {
-    color: 'white',
-  },
-};
 
 export default ListaPizze;
