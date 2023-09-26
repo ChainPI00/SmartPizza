@@ -1,0 +1,138 @@
+/* Home.css */
+
+/* Stili per schermi più grandi (ad esempio, larghezza minima 768px) */
+@media (min-width: 768px) {
+    .home-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 70vh;
+      padding: 80px;
+    }
+  
+    .image-container {
+      position: absolute;
+      top: 60%;
+      left: 35%;
+      transform: translate(-60%, -50%);
+    }
+  
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+      width: 350px;
+      transition: width 0.5s ease-in-out;
+    }
+  
+    .content-container {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      text-align: center;
+      transition: max-width 0.5s ease-in-out;
+    }
+  
+    .logo {
+      margin-bottom: 0;
+      max-width: 300px;
+    }
+  
+    .new-pizza-text {
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 120px 0 20px 0;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff;
+    }
+  
+    .cta-button {
+      background-color: #ff3030;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 25px;
+      text-shadow: 2px 2px 2px black;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  /* Home.css */
+
+/* Stili per schermi più grandi (ad esempio, larghezza minima 768px) */
+@media (min-width: 768px) {
+    .home-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 70vh;
+      padding: 80px;
+    }
+  
+    .image-container {
+      position: absolute;
+      top: 60%;
+      left: 35%;
+      transform: translate(-60%, -50%);
+    }
+  
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+      width: 350px;
+      transition: width 0.5s ease-in-out;
+    }
+  
+    .content-container {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      text-align: center;
+      transition: max-width 0.5s ease-in-out;
+    }
+  
+    .logo {
+      margin-bottom: 0;
+      max-width: 300px;
+    }
+  
+    .new-pizza-text {
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 120px 0 20px 0;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff;
+    }
+  
+    .cta-button {
+      background-color: #ff3030;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 25px;
+      text-shadow: 2px 2px 2px black;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  /* Stili per schermi più piccoli (ad esempio, larghezza massima 767px) */
+  @media (max-width: 767px) {
+    /* Personalizza gli stili per schermi più piccoli qui */
+  }
+  
+  

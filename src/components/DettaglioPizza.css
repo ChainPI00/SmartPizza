@@ -1,0 +1,67 @@
+/* DettaglioPizza.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Per centrare il contenuto */
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* Colore del testo bianco */
+  }
+  
+  .tableStyle {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .th, .td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .th {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+  }
+  
+  .td {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+
+  
+  /* Aggiungi stili per il div delle spiegazioni sugli ingredienti */
+  .ingredientsExplanation {
+    background-color: rgba(0, 0, 0, 0.5); /* Rosso */
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+    color: white; /* Cambia il colore del testo a bianco */
+  }
+  
+  /* Stili per allineare a sinistra i testi degli ingredienti */
+  .ingredientsExplanation h2 {
+    text-align: center; /* Allinea il titolo a sinistra */
+  }
+  
+  .ingredientsExplanation ul {
+    text-align: left; /* Allinea la lista a sinistra */
+    list-style-type: disc; /* Usa i punti come elenchi */
+  }
+  
+  .ingredientsExplanation ul li {
+    text-align: left; /* Allinea gli elementi dell'elenco a sinistra */
+  }
+  /* Altri stili specifici per DettaglioPizza */

@@ -112,26 +112,58 @@ function AggiungiPizza() {
     }
   };
   
-  
-  
-
   return (
     <form onSubmit={handleSubmit}>
-      <div
+      <div style={{ position: 'relative', display: 'flex' }}>
+        <img
+          src="/robotpizza1.png"
+          alt="Robot Pizza"
+          style={{ 
+            width: '250px', 
+            height: '250px', 
+            position: 'absolute', 
+            top: '330px', // Aggiusta la posizione dall'alto
+            right: '470px', // Aggiusta la posizione da destra
+          }}  
+        />
+        <img
+          src="/robotpizza2.png"
+          alt="Robot Pizza 2"
+          style={{ 
+            width: '100px', // Aggiusta la larghezza
+            height: '100px', // Aggiusta l'altezza
+            position: 'absolute', 
+            top: '20px', // Aggiusta la posizione dall'alto
+            right: '80px', // Aggiusta la posizione da destra
+          }} 
+        />
+        <div
         style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          padding: '20px',
+          backgroundColor: '#ff303099',
+          padding: '10px',
           borderRadius: '10px',
-          maxWidth: '600px',
-          margin: '40px auto 0',
+          maxWidth: '400px',
+          margin: '20px',
+          marginLeft: 'auto',
+          marginRight: '100px',
           textAlign: 'center',
+          marginTop: '60px', // Aggiunto un margine superiore di 30px
         }}
-      >
-        <h2 style={{ color: 'white' }}>Dati Pizza</h2>
+>
+
+
+        <img
+          src="/logo.png"
+          alt="SmartPizza Logo"
+          style={{
+            marginBottom: '5px', // Ridotto il margine inferiore
+            maxWidth: '200px',
+          }}
+        />
 
         {/* Sezione Informazioni Generali */}
         <div>
-          <div className="mb-3" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="mb-2" style={{ display: 'flex', alignItems: 'center' }}>
             <label htmlFor="orderId" className="form-label" style={{ color: 'white', width: '180px' }}>Order ID</label>
             <input
               type="number"
@@ -143,7 +175,7 @@ function AggiungiPizza() {
               style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', border: '1px solid white', width: '80px' }}
             />
           </div>
-          <div className="mb-3" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="mb-2" style={{ display: 'flex', alignItems: 'center' }}>
             <label htmlFor="ingredients" className="form-label" style={{ color: 'white', width: '180px' }}>Ingredienti</label>
             <input
               type="text"
@@ -152,7 +184,12 @@ function AggiungiPizza() {
               name="ingredients"
               value={pizzaInfo.ingredients}
               onChange={handleInputChange}
-              style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', border: '1px solid white', width: '300px' }}
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                border: '1px solid white',
+                width: '200px', // Modifica la larghezza del campo
+                marginLeft: '20px', // Aggiungi un margine a sinistra
+              }}
             />
           </div>
         </div>
@@ -160,7 +197,7 @@ function AggiungiPizza() {
         {/* Sezione Informazioni Ambientali */}
         <div>
           {/* Campi di input per Temperatura Ambiente, Umidità, Lievitazione */}
-          <div className="mb-3" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="mb-2" style={{ display: 'flex', alignItems: 'center' }}>
             <label htmlFor="tAmbiente" className="form-label" style={{ color: 'white', width: '180px' }}>Temperatura Ambiente</label>
             <input
               type="number"
@@ -172,7 +209,7 @@ function AggiungiPizza() {
               style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', border: '1px solid white', width: '80px' }}
             />
           </div>
-          <div className="mb-3" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="mb-2" style={{ display: 'flex', alignItems: 'center' }}>
             <label htmlFor="umidita" className="form-label" style={{ color: 'white', width: '180px' }}>Umidità</label>
             <input
               type="number"
@@ -184,7 +221,7 @@ function AggiungiPizza() {
               style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', border: '1px solid white', width: '80px' }}
             />
           </div>
-          <div className="mb-3" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="mb-2" style={{ display: 'flex', alignItems: 'center' }}>
             <label htmlFor="lievitazione1" className="form-label" style={{ color: 'white', width: '180px' }}>1/2 Lievitazione</label>
             <input
               type="number"
@@ -210,7 +247,7 @@ function AggiungiPizza() {
         {/* Sezione Informazioni di Cottura */}
         <div>
           {/* Campi di input per Temperatura Platea, Temperatura Forno, Tempo di Cottura */}
-          <div className="mb-3" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="mb-2" style={{ display: 'flex', alignItems: 'center' }}>
             <label htmlFor="tPlatea" className="form-label" style={{ color: 'white', width: '180px' }}>Temperatura Platea</label>
             <input
               type="number"
@@ -222,7 +259,7 @@ function AggiungiPizza() {
               style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', border: '1px solid white', width: '80px' }}
             />
           </div>
-          <div className="mb-3" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="mb-2" style={{ display: 'flex', alignItems: 'center' }}>
             <label htmlFor="tForno" className="form-label" style={{ color: 'white', width: '180px' }}>Temperatura Forno</label>
             <input
               type="number"
@@ -234,7 +271,7 @@ function AggiungiPizza() {
               style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', border: '1px solid white', width: '80px' }}
             />
           </div>
-          <div className="mb-3" style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="mb-" style={{ display: 'flex', alignItems: 'center' }}>
             <label htmlFor="time" className="form-label" style={{ color: 'white', width: '180px' }}>Tempo di Cottura</label>
             <input
               type="number"
@@ -248,7 +285,8 @@ function AggiungiPizza() {
           </div>
         </div>
 
-        <button type="submit" className="btn btn-light" style={{ color: 'black' }}>Aggiungi Pizza</button>
+        <button type="submit" className="btn btn-light" style={{ color: 'black', marginTop: '10px'  }}>Aggiungi Pizza</button>
+      </div>
       </div>
       <audio ref={audioRef} src="/sound.mp3" preload="auto"></audio>
     </form>
